@@ -1,0 +1,19 @@
+.x-tree-elbow-img {
+    visibility: hidden;
+
+    &:first-child {
+        width: 8px;
+    }
+}
+
+.x-tree-icon-parent {
+    background-image: inline-image('tree/folder-closed.svg');
+
+    .x-grid-tree-node-expanded & {
+        background-image: inline-image('tree/folder-open.svg');
+    }
+}
+
+.x-tree-icon-leaf {
+    background-image: inline-image('tree/file.svg');
+}
