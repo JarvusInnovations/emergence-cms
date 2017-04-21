@@ -9,6 +9,7 @@ Ext.application({
     extend: 'EmergenceContentEditor.Application',
 
     requires: [
+        'Emergence.util.API',
         'Emergence.cms.view.DualView'
     ],
 
@@ -19,9 +20,18 @@ Ext.application({
     //-------------------------------------------------------------------------
 
     launch: function() {
-        var viewportEl = Ext.get('app-viewport'),
+        var pageParams = Ext.Object.fromQueryString(location.search),
+            API = Emergence.util.API,
+            viewportEl = Ext.get('app-viewport'),
             mainView = Ext.create('Emergence.cms.view.DualView');
 
+        // allow API host to be overridden via apiHost param
+        if (pageParams.apiHost) {
+            API.setHost(pageParams.apiHost.replace(/(^[a-zA-Z]+:\/\/)?([^/]+).*/, '$2'));
+            API.setUseSSL(!!pageParams.apiSSL);
+        }
+
+        // load DualView UI into viewport element or created viewport container
         if (viewportEl) {
             mainView.render(viewportEl);
         } else {
