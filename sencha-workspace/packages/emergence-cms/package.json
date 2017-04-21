@@ -9,7 +9,7 @@
      *
      *    "alternateName": [],
      */
-     
+
      /**
       * The namespace of this package.
       *
@@ -264,5 +264,9 @@
      *          }
      *      }
      */
-    "requires": []
+    "requires": [
+        "font-awesome",
+        "emergence-apikit",
+        "jarvus-fileupload"
+    ]
 }

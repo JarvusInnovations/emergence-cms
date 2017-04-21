@@ -1,7 +1,7 @@
 /*jslint browser: true, undef: true *//*global Ext,Emergence*/
 /**
  * TODO: Move UI->model workflows out of change events and into syncContentRecord method
- * TODO: make component load correctly when contentRecord is set before render without afterrender deferment hack 
+ * TODO: make component load correctly when contentRecord is set before render without afterrender deferment hack
  */
 Ext.define('Emergence.cms.view.Editor', {
     extend: 'Ext.dashboard.Dashboard',
@@ -26,7 +26,7 @@ Ext.define('Emergence.cms.view.Editor', {
 
     config: {
         contentRecord: null,
-        composers: ['markdown', 'multimedia', 'embed']
+        composers: ['html', 'markdown', 'multimedia', 'embed']
     },
 
     columnWidths: [1],
@@ -176,7 +176,7 @@ Ext.define('Emergence.cms.view.Editor', {
             me.on('afterrender', fireChange);
         }
     },
-    
+
     applyComposers: function(composers) {
         var aliasPrefix = 'emergence-cms-composer.',
             composersLength = composers.length, composorsIndex = 0, composer;

@@ -1,11 +1,6 @@
 .emergence-cms-editor {
-    border: 1px solid #ccc;
-    -webkit-font-smoothing: antialiased;    
-
-    > .x-panel-header {
-        background-color: #ccc;
-    }
-
+    border: 1px solid #d8d8d8;
+    
     input, textarea {
         @include box-shadow(none);
     }
@@ -33,27 +28,17 @@
         }
     }
     
-    .x-dashboard-column {
-        padding: 7px 7px 0;
-    }
-
-    .x-resizable-handle-south {
-        height: 7px;
-    }
-
     .x-btn-group {
         border-radius: 0;
-    }
-
-    .x-btn-group-header-default-framed {
-        background-color: #ccc;
-        border-radius: 0;
-        padding: 7px;
     }
 }
 
 .emergence-cms-composer {
-    // &:first-child { margin-top: 7px; }
+    margin-top: 8px;
+    
+    > .x-panel-header {
+        padding: 4px 8px;
+    }
 }
 
 .markdown-composer,
@@ -68,8 +53,4 @@
     .x-form-textarea {
         font-family: monospace;
     }
-}
-
-.x-form-item-body-default {
-    min-height: 0;
 }

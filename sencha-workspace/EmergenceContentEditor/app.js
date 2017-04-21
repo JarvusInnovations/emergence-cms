@@ -9,7 +9,7 @@ Ext.application({
     extend: 'EmergenceContentEditor.Application',
 
     requires: [
-        'EmergenceContentEditor.view.main.Main'
+        'Emergence.cms.view.DualView'
     ],
 
     //-------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Ext.application({
 
     launch: function() {
         var viewportEl = Ext.get('app-viewport'),
-            mainView = Ext.create('EmergenceContentEditor.view.main.Main');
+            mainView = Ext.create('Emergence.cms.view.DualView');
 
         if (viewportEl) {
             mainView.render(viewportEl);
