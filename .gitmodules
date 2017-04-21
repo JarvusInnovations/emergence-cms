@@ -2,3 +2,19 @@
 	path = sencha-workspace/ext-6.2.0.981
 	url = https://github.com/JarvusInnovations/extjs.git
 	branch = 6.2.0.981
+[submodule "jarvus-hotfixes"]
+	path = sencha-workspace/packages/jarvus-hotfixes
+	url = https://github.com/JarvusInnovations/sencha-hotfixes.git
+	branch = ext/6/2/0/981
+[submodule "jarvus-apikit"]
+	path = sencha-workspace/packages/jarvus-apikit
+	url = https://github.com/JarvusInnovations/jarvus-apikit.git
+	branch = master
+[submodule "emergence-apikit"]
+	path = sencha-workspace/packages/emergence-apikit
+	url = https://github.com/JarvusInnovations/emergence-apikit.git
+	branch = master
+[submodule "jarvus-fileupload"]
+	path = sencha-workspace/packages/jarvus-fileupload
+	url = https://github.com/JarvusInnovations/jarvus-fileupload.git
+	branch = master
