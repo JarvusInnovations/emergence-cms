@@ -10,7 +10,8 @@ Ext.application({
 
     requires: [
         'Emergence.util.API',
-        'Emergence.cms.view.DualView'
+        'Emergence.cms.view.DualView',
+        'Ext.container.Viewport'
     ],
 
     //-------------------------------------------------------------------------
@@ -39,11 +40,9 @@ Ext.application({
                 mainView.setWidth(info.contentWidth);
             });
         } else {
-            Ext.require('Ext.container.Viewport', function() {
-                Ext.create('Ext.container.Viewport', {
-                    layout: 'fit',
-                    items: mainView
-                });
+            Ext.create('Ext.container.Viewport', {
+                layout: 'fit',
+                items: mainView
             });
         }
     }
