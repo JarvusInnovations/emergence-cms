@@ -34,6 +34,10 @@ Ext.application({
         // load DualView UI into viewport element or created viewport container
         if (viewportEl) {
             mainView.render(viewportEl);
+
+            viewportEl.on('resize', function(el, info) {
+                mainView.setWidth(info.contentWidth);
+            });
         } else {
             Ext.require('Ext.container.Viewport', function() {
                 Ext.create('Ext.container.Viewport', {
