@@ -22,9 +22,25 @@ Ext.application({
 
     launch: function() {
         var pageParams = Ext.Object.fromQueryString(location.search),
+            siteEnv = window.SiteEnvironment || {},
             API = Emergence.util.API,
             viewportEl = Ext.get('app-viewport'),
-            mainView = Ext.create('Emergence.cms.view.DualView');
+            editorConfig = {},
+            mainView;
+
+        // configure editor
+        if (siteEnv.cmsComposers) {
+            editorConfig.composers = siteEnv.cmsComposers;
+        }
+
+        if (siteEnv.cmsContent) {
+            editorConfig.contentRecord = siteEnv.cmsContent;
+        }
+
+        // instantiate editor
+        mainView = Ext.create('Emergence.cms.view.DualView', {
+            editorConfig: editorConfig
+        });
 
         // allow API host to be overridden via apiHost param
         if (pageParams.apiHost) {
@@ -45,5 +61,7 @@ Ext.application({
                 items: mainView
             });
         }
+
+        this.callParent();
     }
 });
