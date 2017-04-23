@@ -300,7 +300,7 @@
     "production": {
         "output": {
             "appCache": {
-                "enable": true,
+                "enable": false,
                 "path": "cache.appcache"
             }
         },
@@ -308,7 +308,7 @@
             "cache": "${build.timestamp}"
         },
         "cache": {
-            "enable": true
+            "enable": false
         },
         "compressor": {
             "type": "yui"
