@@ -2,5 +2,6 @@
 
 /sencha-workspace/build/
 
+/sencha-workspace/EmergenceContentEditor/local.properties
 /sencha-workspace/EmergenceContentEditor/bootstrap.*
 /sencha-workspace/EmergenceContentEditor/sass/example/bootstrap.*
